@@ -1,0 +1,18 @@
+docker pull mcr.microsoft.com/mssql/server
+
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=myStrong(!)Password' -e 'MSSQL_PID=Express' -p 1433:1433 -d mcr.microsoft.com/mssql/server:latest
+
+docker exec -it 'e67b5e5bd452' /opt/mssql-tools/bin/sqlcmd -S 'localhost' -U sa -P 'myStrong(!)Password'
+
+CREATE DATABASE DemoData;
+GO
+USE DemoData;
+GO
+CREATE TABLE fares(id_passenger TEXT, id_request TEXT, estimate_fare REAL, estimate_distance REAL, estimate_duration INTEGER);
+GO
+CREATE TABLE payment_mean(id_passenger TEXT, created_at TEXT,deleted_at TEXT);
+GO
+CREATE TABLE requests(id_request TEXT, latitude REAL, longitude REAL, has_promo TEXT, created_at	TEXT);
+GO
+CREATE TABLE rides(id_request TEXT, id_driver TEXT, rating TEXT, actual_revenue REAL, created_at TEXT);
+GO

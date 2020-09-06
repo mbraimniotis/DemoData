@@ -1,0 +1,15 @@
+DayOfWeek,paid_by,cnt
+Monday,Cash,66
+Monday,Credit Card,2312
+Tuesday,Cash,79
+Tuesday,Credit Card,2490
+Wednesday,Credit Card,2700
+Wednesday,Cash,73
+Thursday,Cash,82
+Thursday,Credit Card,2781
+Friday,Cash,81
+Friday,Credit Card,2864
+Saturday,Credit Card,3100
+Saturday,Cash,91
+Sunday,Cash,68
+Sunday,Credit Card,2591
